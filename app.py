@@ -109,20 +109,26 @@ def save_qualifying_loans(qualifying_loans):
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # Usability dialog for saving the CSV Files.
+    # Checking to make sure length of loans is 0 and printing that there are no qualified loans
     if len(qualifying_loans) == 0:
         print("You have no qualifying loans. Have a nice day.")
     else:
+        # Statement to check if user wants to save file and printing goodbye if not.
         savefile = questionary.confirm("Would you like to save a file?").ask()
         if savefile == False:
             print("Thank you have a nice day.")
         else:
+            # Creating header for csv file.
             header=["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Interest Rate"]
-
+            # Inputting name of csv file and saving its path.
             csvpath = questionary.text("Enter a file name to save to (.csv):").ask()
             csvpath = Path(csvpath)
+            # Opening csv file to with writer.
             with open(csvpath, 'w', newline='') as csvfile:
                 csvwriter = csv.writer(csvfile)
+                # Writing header
                 csvwriter.writerow(header)
+                # Writing all rows of qualifying_loans to file.
                 for row in qualifying_loans:
                     csvwriter.writerow(row)
 
