@@ -7,7 +7,6 @@ Example:
     $ python app.py
 """
 import sys
-from tokenize import blank_re
 import fire
 import questionary
 import csv
