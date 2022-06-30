@@ -36,7 +36,7 @@ python app.py
 ```
 in a terminal that's within the working directory.
 
-![Loan Qualifier Usage](images/newusage.jpg)
+![Loan Qualifier Usage](images/newusage.JPG)
 
 ---
 
