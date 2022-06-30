@@ -7,8 +7,10 @@ Example:
     $ python app.py
 """
 import sys
+from tokenize import blank_re
 import fire
 import questionary
+import csv
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
@@ -101,15 +103,27 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     return bank_data_filtered
 
-
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    # Usability dialog for saving the CSV Files.
+    if len(qualifying_loans) == 0:
+        print("You have no qualifying loans. Have a nice day.")
+    else:
+        savefile = questionary.confirm("Would you like to save a file?").ask()
+        if savefile == False:
+            print("Thank you have a nice day.")
+        else:
+            csvpath = questionary.text("Enter a file path to save to (.csv):").ask()
+            csvpath = Path(csvpath)
+            with open(csvpath, 'w', newline='') as csvfile:
+                csvwriter = csv.writer(csvfile)
+                for row in qualifying_loans:
+                    csvwriter.writerow(row)
+
 
 
 def run():
@@ -125,7 +139,8 @@ def run():
     qualifying_loans = find_qualifying_loans(
         bank_data, credit_score, debt, income, loan_amount, home_value
     )
-
+    print(qualifying_loans)
+    print(f"there are {len(qualifying_loans)} loans")
     # Save qualifying loans
     save_qualifying_loans(qualifying_loans)
 
