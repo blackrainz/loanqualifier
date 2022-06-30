@@ -1,0 +1,50 @@
+  203  ls
+  204  cd loan_qualifier_app/
+  205  ls
+  206  cd loanqualifier/
+  207  ls
+  208  git add .
+  209  conda activate dev
+  210  jupyter lab
+  211  git 
+  212  git status
+  213  git
+  214  git commit -m "Initial commit of loan qualifier app"
+  215  git push
+  216  git status
+  217  git add README.md
+  218  git status
+  219  git commit -m "Updating readme."
+  220  git push
+  221  git
+  222  git branch
+  223  git branch ?
+  224  git branch csvwriter
+  225  git branch
+  226  git switch
+  227  git switch csvwriter
+  228  CODE .
+  229  CODE .
+  230  git status
+  231  git add app.py
+  232  git status
+  233  git commit -m "adding functionality to save qualifying data as CSV file."
+  234  git push
+  235  git push --set-upstream origina csvwriter
+  236  git push --set-upstream origin csvwriter
+  237  git status
+  238  git status
+  239  git add app.py
+  240  git status
+  241  code .
+  242  git status
+  243  git add app.py
+  244  git commit -m "removed errnoeous import from app.py"
+  245  git push
+  246  git status
+  247  code .
+  248  git status
+  249  git add .
+  250  git commit -m "Updated readme.md and cleaned up code in app.py"
+  251  git push
+  252  history 50 > terminal_history.txt
