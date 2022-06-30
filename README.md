@@ -45,6 +45,7 @@ in a terminal that's within the working directory.
 ## Contributors
 
 App creation by FinTech Bootcamp
+
 App contribution towards csv data saver by Patrick B.
 
 ---
