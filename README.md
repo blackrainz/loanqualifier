@@ -1,6 +1,10 @@
 # Loan Qualifier Application
 
-The Loan Qualifier Application is a python command line interface application that uses a daily rate sheet csv file to search for qualifying loans based on your credit score, monthly income, monthly debt, desired loan amount, and the home value.
+The Loan Qualifier Application is a python command line interface application that uses a daily rate sheet csv file to search for qualifying loans based on your credit score, monthly income, monthly debt, desired loan amount, and the home value. 
+
+Currently in progress:
+
+Addition of saving data to csv.
 
 ---
 
@@ -40,7 +44,8 @@ in a terminal that's within the working directory.
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+App creation by FinTech Bootcamp
+App contribution towards csv data saver by Patrick B.
 
 ---
 
